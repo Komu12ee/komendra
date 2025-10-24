@@ -535,7 +535,8 @@ Beyond coding, I’m a district-level basketball player, and I believe the game 
                 <div class="col-lg-12">
                     
                     <!-- Contact Form -->
-                    <form id="contactForm">
+                    <!-- <form id="contactForm" action="https://formspree.io/f/mqayrnbn" method="POST">
+
                         <div class="form-group">
                             <input type="text" class="form-control-input" id="cname" required>
                             <label class="label-control" for="cname">Name</label>
@@ -551,9 +552,66 @@ Beyond coding, I’m a district-level basketball player, and I believe the game 
                         <div class="form-group">
                             <button type="submit" class="form-control-submit-button">Submit</button>
                         </div>
-                    </form>
-                    <!-- end of contact form -->
+                    </form> -->
 
+
+                    <form id="contactForm" action="https://formspree.io/f/mqayrnbn" method="POST">
+                        <!-- Hidden input to set email subject -->
+                        <input type="hidden" name="_subject" value="message from the portfolio website">
+
+                        <div class="form-group">
+                            <input type="text" class="form-control-input" id="cname" name="name" required>
+                            <label class="label-control" for="cname">Name</label>
+                        </div>
+                    
+                        <div class="form-group">
+                            <input type="email" class="form-control-input" id="cemail" name="email" required>
+                            <label class="label-control" for="cemail">Email</label>
+                        </div>
+                    
+                        <div class="form-group">
+                            <textarea class="form-control-textarea" id="cmessage" name="message" required></textarea>
+                            <label class="label-control" for="cmessage">Project details</label>
+                        </div>
+                    
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">Submit</button>
+                        </div>
+                    
+                    </form>
+
+                    <!-- Success message -->
+                    <p id="successMessage" style="display:none; color: green; font-weight: bold;">
+                        Thank you! Your message has been sent.
+                    </p>
+                    
+                    <script>
+                    document.getElementById('contactForm').addEventListener('submit', function(e){
+                        e.preventDefault(); // prevent page reload
+                        const formData = new FormData(this);
+                    
+                        fetch(this.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: { 'Accept': 'application/json' }
+                        })
+                        .then(response => {
+                            if(response.ok){
+                                document.getElementById('successMessage').style.display = 'block'; // show message
+                                this.reset(); // clear the form
+                            } else {
+                                alert("Oops! There was a problem sending your message.");
+                            }
+                        })
+                        .catch(error => {
+                            alert("Oops! There was a problem sending your message.");
+                            console.error(error);
+                        });
+                    });
+                    </script>
+                    
+                                        <!-- end of contact form -->
+                    
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -570,15 +628,15 @@ Beyond coding, I’m a district-level basketball player, and I believe the game 
                 <!-- Contact Icons -->
                 <div class="contact-icons" style="font-size: 2rem; margin-top: 20px;">
                     <!-- Email -->
-                    <a href="mailto:contact@domain.com" target="_blank" style="margin: 0 15px; color: #007BFF;">
+                    <a href="mailto:sahukomendra721@gmail.com" target="_blank" style="margin: 0 15px; color: #007BFF;">
                         <i class="fas fa-envelope"></i>
                     </a>
                     <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" style="margin: 0 15px; color: #0077B5;">
+                    <a href="www.linkedin.com/in/komendrasahu" target="_blank" style="margin: 0 15px; color: #0077B5;">
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <!-- GitHub -->
-                    <a href="https://github.com/yourusername" target="_blank" style="margin: 0 15px; color: #333;">
+                    <a href="https://github.com/Komu12ee" target="_blank" style="margin: 0 15px; color: #333;">
                         <i class="fab fa-github"></i>
                     </a>
                     <!-- Twitter (optional) -->
