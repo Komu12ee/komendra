@@ -31,7 +31,7 @@ Colors:
 
 
 /**************************/
-/*     General Styles     */
+/* General Styles      */
 /**************************/
 body,
 html {
@@ -297,16 +297,16 @@ a:hover {
 }
 
 select {
-    /* you should keep these first rules in place to maintain cross-browser behavior */
-    -webkit-appearance: none;
+    /* you should keep these first rules in place to maintain cross-browser behavior */
+    -webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    background-image: url('../images/down-arrow.png');
-    background-position: 96% 50%;
-    background-repeat: no-repeat;
-    outline: none;
+    -o-appearance: none;
+    appearance: none;
+    background-image: url('../images/down-arrow.png');
+    background-position: 96% 50%;
+    background-repeat: no-repeat;
+    outline: none;
 }
 
 .form-control-textarea {
@@ -369,7 +369,7 @@ input[type='checkbox'] {
 
 
 /**********************/
-/*     Navigation     */
+/* Navigation      */
 /**********************/
 .navbar {
 	background-color: #24262a;
@@ -385,7 +385,7 @@ input[type='checkbox'] {
 }
 
 .navbar .logo-image img {
-    width: 118px;
+    width: 118px;
 	height: 36px;
 }
 
@@ -444,12 +444,12 @@ input[type='checkbox'] {
 }
 
 @keyframes fadeDropdown {
-    0% {
-        opacity: 0;
-    }
+    0% {
+        opacity: 0;
+    }
 
-    100% {
-        opacity: 1;
+    100% {
+        opacity: 1;
 	}
 }
 
@@ -516,15 +516,32 @@ input[type='checkbox'] {
 
 
 /******************/
-/*     Header     */
+/* Header      */
 /******************/
 .header {
 	padding-top: 7rem;
 	padding-bottom: 5.5rem;
-	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../myimage/ai_ml_background.jpg') center center no-repeat;
-	background-size: cover;
+    /* Removed original background image to allow new layout and used a solid color */
+	background: #24262a; 
 	text-align: center;
 }
+
+/* NEW: Styles for the photo container and image */
+.header .header-photo-container {
+    display: flex; 
+    align-items: center; /* Vertical center */
+    justify-content: center; /* Horizontal center */
+    margin-bottom: 2rem; /* Spacing before text on small screens */
+}
+
+.header .my-header-photo {
+    /* Adjust these values to control the size of your photo */
+    max-width: 80%; 
+    height: auto;
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    box-shadow: 0 0 20px rgba(11, 54, 168, 0.5); /* Optional: Adds a glow effect */
+}
+
 
 .header .h1-large {
 	margin-bottom: 1.75rem;
@@ -554,7 +571,7 @@ input[type='checkbox'] {
 
 
 /*****************/
-/*     About     */
+/* About      */
 /*****************/
 .basic-1 {
 	padding-top: 7.75rem;
@@ -563,6 +580,8 @@ input[type='checkbox'] {
 
 .basic-1 .text-container {
 	margin-bottom: 3rem;
+	display: flex;
+	flex-direction: row;
 }
 
 .basic-1 .time {
@@ -580,7 +599,7 @@ input[type='checkbox'] {
 
 
 /********************/
-/*     Services     */
+/* Services      */
 /********************/
 .basic-2 {
 	padding-top: 7.75rem;
@@ -616,7 +635,7 @@ input[type='checkbox'] {
 
 
 /*******************/
-/*     Details     */
+/* Details      */
 /*******************/
 .split .area-1 {
 	height: 430px;
@@ -645,7 +664,7 @@ input[type='checkbox'] {
 
 
 /********************/
-/*     Projects     */
+/* Projects      */
 /********************/
 .basic-3 {
 	padding-top: 7.75rem;
@@ -691,7 +710,7 @@ input[type='checkbox'] {
 
 
 /*****************/
-/*     Works     */
+/* Works      */
 /*****************/
 .basic-4 {
 	padding-bottom: 1rem;
@@ -726,7 +745,7 @@ input[type='checkbox'] {
 
 
 /************************/
-/*     Testimonials     */
+/* Testimonials      */
 /************************/
 .cards-1 {
 	padding-top: 3rem;
@@ -775,7 +794,7 @@ input[type='checkbox'] {
 
 
 /*********************/
-/*     Questions     */
+/* Questions      */
 /*********************/
 .accordion-1 {
 	padding-top: 7.75rem;
@@ -832,7 +851,7 @@ input[type='checkbox'] {
 
 
 /*******************/
-/*     Contact     */
+/* Contact      */
 /*******************/
 .form-1 {
 	padding-top: 7.75rem;
@@ -851,7 +870,7 @@ input[type='checkbox'] {
 
 
 /******************/
-/*     Footer     */
+/* Footer      */
 /******************/
 .footer {
 	padding-top: 6.25rem;
@@ -872,7 +891,7 @@ input[type='checkbox'] {
 }
 
 .footer .fa-stack .fa-stack-1x {
-    color: #ffffff;
+    color: #ffffff;
 	transition: all 0.2s ease;
 }
 
@@ -886,12 +905,12 @@ input[type='checkbox'] {
 }
 
 .footer .fa-stack:hover .fa-stack-2x {
-    color: #ffffff;
+    color: #ffffff;
 }
 
 
 /*********************/
-/*     Copyright     */
+/* Copyright      */
 /*********************/
 .copyright {
 	padding-top: 1rem;
@@ -911,7 +930,7 @@ input[type='checkbox'] {
 
 
 /******************************/
-/*     Back To Top Button     */
+/* Back To Top Button      */
 /******************************/
 a.back-to-top {
 	position: fixed;
@@ -933,7 +952,7 @@ a:hover.back-to-top {
 
 
 /***********************/
-/*     Extra Pages     */
+/* Extra Pages      */
 /***********************/
 .ex-header {
 	padding-top: 8.5rem;
@@ -990,7 +1009,7 @@ a:hover.back-to-top {
 
 
 /*************************/
-/*     Media Queries     */
+/* Media Queries      */
 /*************************/	
 /* Min-width 768px */
 @media (min-width: 768px) {
@@ -1101,12 +1120,22 @@ a:hover.back-to-top {
 	/* end of navigation */
 
 
-	/* Header */
+	/* Header - Updated for Two Column Layout */
 	.header {
 		padding-top: 15rem;
 		padding-bottom: 14rem;
 		text-align: left;
 	}
+
+    .header .header-photo-container {
+        justify-content: flex-start; /* Push photo to the left */
+    }
+
+    .header .my-header-photo {
+        max-height: 500px; /* Set a maximum height for the photo on desktop */
+        max-width: 100%;
+        object-fit: contain;
+    }
 	/* end of header */
 
 
