@@ -1,0 +1,271 @@
+/* ===============================
+   1. Global Blog Styling
+=============================== */
+:root {
+    --color-primary: #007bff; /* Use your brand color */
+    --color-dark-teal: #0D3E3B; /* Dark teal/green color for sidebar */
+    --color-off-white: #f7f7f7;
+    --color-dark-gray: #333333;
+    --color-black: #000000;
+}
+
+body {
+    background-color: var(--color-off-white);
+}
+
+/* ===============================
+   2. Navigation Bar Overrides
+=============================== */
+.blog-navbar {
+    background-color: white; /* White background */
+    border-bottom: 1px solid #ddd; /* Subtle bottom border */
+}
+
+.blog-navbar .nav-link {
+    color: var(--color-black) !important; /* Dark text for links */
+    font-weight: 500;
+}
+
+/* ===============================
+   3. Header Styling
+=============================== */
+.blog-page-header {
+    background: white; /* Keep header area white */
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    text-align: center; /* Center the text */
+}
+
+.blog-title {
+    font-size: 4rem; /* Large, bold font */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.blog-subtitle {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* ===============================
+   4. Featured Blogs Section
+=============================== */
+
+.featured-blogs h2 {
+    font-size: 1.5rem;
+    color: var(--color-dark-gray);
+}
+
+.see-all-link {
+    color: var(--color-primary); /* Use a contrast color */
+    font-weight: 600;
+}
+
+.featured-card {
+    /* The featured cards use a dark background as seen in the image */
+    background-color: var(--color-dark-gray); 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden; /* To contain the image */
+}
+
+.featured-card .card-img-top {
+    /* You'll need an image for the dark card to create the layered look */
+    height: 250px; 
+    object-fit: cover;
+    opacity: 0.6; /* Slight dimming to emphasize text overlay */
+}
+
+.featured-card .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)); /* Gradient overlay */
+    padding-top: 40px; 
+}
+
+.featured-card .blog-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.featured-card .card-title {
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+/* ===============================
+   5. Article List and Filters
+=============================== */
+.blog-filters {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+}
+
+.filter-label {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.filter-tag {
+    background-color: var(--color-off-white);
+    color: var(--color-black);
+    border: 1px solid #ccc;
+    margin-right: 8px;
+    border-radius: 20px;
+}
+
+.filter-tag.active {
+    background-color: var(--color-dark-gray);
+    color: white;
+    border-color: var(--color-dark-gray);
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding-right: 30px; 
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+}
+
+.search-box .fa-search {
+    position: absolute;
+    right: 5px;
+    color: #777;
+}
+
+/* Single Article Item */
+.article-thumbnail {
+    border-radius: 6px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.article-meta {
+    margin-bottom: 5px;
+}
+
+.article-meta .meta-tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-primary); /* Highlight the category */
+    margin-right: 15px;
+}
+
+.article-meta .meta-date {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.article-item h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.read-more-link {
+    color: var(--color-primary); 
+    font-weight: 600;
+}
+
+/* Pagination */
+.pagination-container .page-item a {
+    color: var(--color-black);
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+
+.pagination-container .page-item.active a {
+    background-color: var(--color-black);
+    border-color: var(--color-black);
+    color: white;
+}
+
+/* ===============================
+   6. Sidebar Styling
+=============================== */
+
+.mailing-list-block {
+    background-color: var(--color-dark-teal); /* Dark teal background */
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.mailing-list-block h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.mailing-list-block p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.mailing-list-block .form-control {
+    background-color: white;
+    border: none;
+}
+
+.mailing-list-block .btn-primary {
+    background-color: var(--color-primary);
+    border: none;
+    font-weight: 600;
+}
+
+/* Contact/Discuss Project Block (Sidebar Footer Look) */
+.contact-block {
+    background-color: var(--color-dark-gray); /* Use a dark background */
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.contact-block h4, .contact-block .h2-like {
+    color: white;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.contact-block .contact-arrow {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.contact-divider {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact-block .footer-nav li a {
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+.contact-block .footer-nav li a:hover {
+    color: white;
+}
+
+/* Adjust your social icons/footer section based on these colors */
+.contact-block .social-links h5 {
+    font-size: 1rem;
+    color: #ccc;
+}
