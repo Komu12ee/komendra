@@ -955,8 +955,8 @@ a:hover.back-to-top {
 /* Extra Pages      */
 /***********************/
 .ex-header {
-	padding-top: 8.5rem;
-	padding-bottom: 4rem;
+	padding-top: 2.5rem;
+	padding-bottom: 2rem;
 	background-color: #24262a;
 }
 
@@ -1060,7 +1060,7 @@ a:hover.back-to-top {
 	/* Navigation */
 	.navbar {
 		padding-top: 1.75rem;
-		background-color: transparent;
+		background-color: #24262a;
 		box-shadow: none;
 		transition: all 0.2s;
 	}
